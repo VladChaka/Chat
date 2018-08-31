@@ -22,9 +22,13 @@ export class ChatComponent implements OnInit {
 
     getMessages(): void {
         this.socketService.onMessage(this.socket)
-            .subscribe((message: any) => {
-                this.messages.push(message.content);
+            .subscribe(message => {
+                this.messages.push(message);
             });
+    }
+
+    changeUsername(username): void {
+        this.socket.emit('change_username', username);
     }
 
     sendMessage(): void {

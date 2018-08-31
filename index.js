@@ -6,8 +6,17 @@ const express  = require('express'),
       server   = http.createServer(app),
       io       = require('socket.io')(server);
 
-io.on('connection', function (socket) {
-    socket.on('message', function (data) {
+io.on('connection', socket => {
+    socket.username = 'Ananimus';
+
+    socket.on('change_username', data => {
+        socket.username = data;
+    });
+
+    socket.on('message', data => {
+        data.author = socket.username;
+        console.log(data);
+        
         io.emit('message', data);
     });
 });

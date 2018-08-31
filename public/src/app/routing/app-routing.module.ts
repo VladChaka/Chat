@@ -6,10 +6,12 @@ import { ChatComponent } from '../component/chat/chat.component';
 import { AuthenticationComponent } from '../component/authentication/authentication.component';
 
 import { AuthenticationGuard } from "../service/authentication-guard.service";
+
 const mainRoutes: Routes = [
     {
         path: 'chat',
-        component: ChatComponent
+        component: ChatComponent,
+        canActivate: [AuthenticationGuard]
     },
     {
         path: 'login',
