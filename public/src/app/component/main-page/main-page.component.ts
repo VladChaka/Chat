@@ -8,19 +8,20 @@ import { SocketService } from '../../service/socket.service';
 
 export class MainPageComponent implements OnInit {
     ioConnection: any;
+    myMessage: string;
     messages: any = [];
+    socket: SocketIOClient.Socket = this.socketService.initSocket();
+
     constructor(
         private socketService: SocketService,
     ) { }
 
     ngOnInit(): void {
-        this.initIoConnection();
+        this.getMessages();
     }
     
-    initIoConnection(): void {
-        this.socketService.initSocket();
-    
-        this.socketService.onMessage()
+    getMessages(): void {
+        this.socketService.onMessage(this.socket)
             .subscribe((message: any) => {
                 this.messages.push(message.content);
             });
@@ -30,15 +31,15 @@ export class MainPageComponent implements OnInit {
         if (!this.myMessage) { return; }
 
         let currentdate = new Date();
-        let time = currentdate.getHours() + ":"
-            + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+        let time = currentdate.getHours() + ":"  + currentdate.getMinutes() + ":" + currentdate.getSeconds();
 
-        this.message = {
+        let message = {
             text: this.myMessage,
             author: "Vlad",
             time: time
-        }
-        this.socketService.send({ content: this.message });
+        };
+        
+        this.socketService.send(this.socket, { content: message });
         this.myMessage = "";
     }
 }

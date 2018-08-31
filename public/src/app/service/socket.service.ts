@@ -3,36 +3,29 @@ import { Observable } from 'rxjs';
 
 import * as socketIo from 'socket.io-client';
 
+const config = {
+    url: 'http://localhost:',
+    port: 4000
+};
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class SocketService {
-
-    
-    socket: SocketIOClient.Socket;
     constructor() { }
 
-    // socket;
-
-    public initSocket(): void {
-        this.socket = socketIo('http://localhost:4000');
+    initSocket(): any {
+        return socketIo(config.url + config.port);
     }
 
-    public send(message: any): void {
-        this.socket.emit('message', message);
+    send(socket, message: any): void {
+        socket.emit('message', message);
     }
 
-    public onMessage(): Observable<any> {
+    onMessage(socket): Observable<any> {
         return new Observable<any>(observer => {
-            this.socket.on('message', (data: any) => observer.next(data));
+            socket.on('message', (data: any) => observer.next(data));
         });
     }
-
-    // public onEvent(event: Event): Observable<any> {
-    //     return new Observable<Event>(observer => {
-    //         this.socket.on(event, () => observer.next());
-    //     });
-    // }
 }

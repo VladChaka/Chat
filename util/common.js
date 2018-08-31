@@ -6,7 +6,7 @@ module.exports = (key, value) => {
         pref = keyValue[0].toLowerCase();
 
         if (pref === key) {
-            result = key === "local" ? result = "mongodb://myadmin:mysecret@127.0.0.1:27017/admin" : result = keyValue[1];
+            result = keyValue[1];
             break;
         }
     }
