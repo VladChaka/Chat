@@ -13,10 +13,9 @@ app.use(express.static(__dirname))
 io.on('connection', function (socket) {
     // socket.emit('news', { hello: 'world' });
 
+    // socket.broadcast.emit('message');
     socket.on('message', function (data) {
-        socket.client
-        socket.send(data.content);
-        console.log(data);
+        io.emit('message', data);
     });
 });
 
