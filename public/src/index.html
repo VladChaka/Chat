@@ -7,32 +7,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/src/app/favicon/favicon.ico">
-  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-  <script>
-      // Initialize Firebase
-      var config = {
-          apiKey: "AIzaSyDZA_y5KIhevYrymsjdrmTz6EF1rXKHeqY",
-          authDomain: "chat-215011.firebaseapp.com",
-          databaseURL: "https://chat-215011.firebaseio.com",
-          projectId: "chat-215011",
-          storageBucket: "chat-215011.appspot.com",
-          messagingSenderId: "69463920025"
-      };
-      firebase.initializeApp(config);
-
-      googleSignIn=()=> {
-          base_provider = new firebase.auth.GoogleAuthProvider()
-          firebase.auth().signInWithPopup(base_provider).then(function (result) {
-              console.log(result)
-              console.log("Succes. Linked")
-          }).catch(function (err) {
-              console.log(err)
-              console.log("failed to do")
-          });
-      };
-  </script>
 </head>
 <body>
-    <authentication></authentication>
+    <main-page></main-page>
 </body>
 </html>

@@ -17,6 +17,7 @@
     "@angular/router": "^6.1.0",
     "@types/socket.io-client": "^1.4.32",
     "core-js": "^2.5.4",
+    "firebase": "^5.4.2",
     "less": "^3.8.1",
     "ngx-pagination": "^3.2.0",
     "rxjs": "^6.0.0",

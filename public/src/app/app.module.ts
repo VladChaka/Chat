@@ -4,18 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { MainPageComponent } from './component/main-page/main-page.component';
 import { MessageComponent } from './component/message/message.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
+import { AppRoutingModule } from './routing/app-routing.module';
+import { ChatComponent } from './component/chat/chat.component';
 
 @NgModule({
   declarations: [
     MainPageComponent,
     MessageComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [ ],
-  bootstrap: [AuthenticationComponent]
+  bootstrap: [MainPageComponent]
 })
 export class AppModule { }
