@@ -6,7 +6,7 @@
         <message [message]="message" *ngFor="let message of messages"></message>
     </div>
         <form class="chat-form">
-            <textarea #message placeholder="Your message"></textarea>
-            <button (click)="sendMessage(message.value)">Send</button>
+            <textarea [(ngModel)]="myMessage" name="myMessage" placeholder="Your message"></textarea>
+            <button (click)="sendMessage()">Send</button>
         </form>
 </div>

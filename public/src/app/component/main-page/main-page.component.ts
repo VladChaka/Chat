@@ -9,36 +9,34 @@ import { SocketService } from '../../service/socket.service';
 })
 
 export class MainPageComponent implements OnInit {
-
-    messages = [];
     ioConnection: any;
-    // messages: any = [
-    //     {
-    //         text: "Hello, my name is Vlad Chaka",
-    //         author: "Vlad",
-    //         data: "14.05",
-    //         time: "23:55",
-    //     },
-    //     {
-    //         text: "Hello, my name is Vlad Chaka",
-    //         author: "Vlad",
-    //         data: "14.05",
-    //         time: "23:55",
-    //     },
-    //     {
-    //         text: "Hello, my name is Vlad Chaka",
-    //         author: "Vlad",
-    //         data: "14.05",
-    //         time: "23:55",
-    //     },
+    messages: any = [
+        {
+            text: "Hello, my name is Vlad Chaka",
+            author: "Vlad",
+            data: "14.05",
+            time: "23:55",
+        },
+        {
+            text: "Hello, my name is Vlad Chaka",
+            author: "Vlad",
+            data: "14.05",
+            time: "23:55",
+        },
+        {
+            text: "Hello, my name is Vlad Chaka",
+            author: "Vlad",
+            data: "14.05",
+            time: "23:55",
+        },
 
-    //     {
-    //         text: "Hello, my name is Vlad Chaka",
-    //         author: "Vlad",
-    //         data: "14.05",
-    //         time: "23:55",
-    //     }
-    // ];
+        {
+            text: "Hello, my name is Vlad Chaka",
+            author: "Vlad",
+            data: "14.05",
+            time: "23:55",
+        }
+    ];
     constructor(
         private formService: FormService,
         private socketService: SocketService,
@@ -62,7 +60,22 @@ export class MainPageComponent implements OnInit {
 
     sendMessage(message: string): void {
         if (!message) { return; }
-        
+
+        // let currentdate = new Date();
+        // let date = currentdate.getDay() + "/"+currentdate.getMonth()
+        //     + "/" + currentdate.getFullYear();
+        // let time = currentdate.getHours() + ":"
+        //     + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+        //
+        // this.message = {
+        //     text: this.myMessage,
+        //     author: "Vlad",
+        //     data: date,
+        //     time: time,
+        // }
+        // this.messages.push(message);
+        //
+        // console.log(message);
         this.socketService.send({ content: message });
     }
 }
