@@ -86,6 +86,39 @@ flex-basis: 10%;
   background: @color2;
   border-top: 2px solid @color3;
   border-bottom: 2px solid @color3;
+  overflow-y: hidden;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.message-block{
+  flex-direction: column;
+  display: flex;
+  max-width: 45vw;
+  //>div{
+  //  width: 100%;
+  //}
+}
+.message-author{
+  line-height: 0.9;
+  color:@color3;
+  font-size: 1.1rem;
+}
+.message-text{
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color:@color1;
+  background: @color2;
+  border: @color1 2px solid;
+}
+.message-date{
+  text-align: right;
+  padding-top: 2px;
+  color:grey;
+  font-size: 0.8rem;
 }
 //
 //*:active, *:focus {
