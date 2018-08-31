@@ -1,0 +1,164 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+  //.user-add, .user-edit, .library-card {
+  //  overflow-y: auto;
+  //  font-size: 0.9rem;
+  //  padding: 5px 10px;
+  //  input{
+  //    width: 65%;
+  //  }
+  //}
+
+  .list-buttons {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list-book-buttons{
+    flex-wrap: wrap-reverse;
+    >*{
+        flex-basis: 50%;
+    }
+}
+.list-buttons>*{
+    padding:5px;
+ }
+
+.list-user-names {
+  padding-left: 0;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  >div{
+      padding: 5px;
+      flex-basis: 100%/3;
+  }
+}
+.list-user-block {
+  justify-content: flex-start;
+  padding-left: 0;
+  >div{
+      flex-basis: 100%/3;
+  }
+}
+.dashboard-btns{
+    flex-basis: 100%;
+    border-bottom: 2px solid @color2;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.user-dashboard{
+  flex-wrap: wrap;
+  >*{
+    flex-basis: 100%;
+  }
+}
+.user-edit{
+  font-size: 0.85rem;
+  input{
+    font-size: 0.85rem;
+  }
+  border-radius: 0;
+  > div > span {
+      padding-right: 3px;
+    }
+}
+.user-dashboard>form>div:not(:last-child){
+  padding:2px 3px;
+  margin-bottom: 0;
+}
+
+  .users-menu{
+    padding: 0;
+    flex-wrap: wrap-reverse;
+    border-left: none;
+    border-right: none;
+  }
+.user-form{
+  font-size: 0.85rem;
+  input{
+    font-size: 0.85rem;
+  }
+}
+.users-login{
+  padding: 10px 20px;
+}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .list-buttons {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+  }
+  .list-buttons>*{
+      padding: 0 5px;
+   }
+
+  .list-user-names {
+    padding-left: 0;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    >div{
+        padding: 5px;
+        flex-basis: 100%/3;
+    }
+  }
+  .list-user-block {
+    justify-content: flex-start;
+    padding-left: 0;
+    >div{
+        flex-basis: 100%/3;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .list-user-names {
+      > div {
+        padding: 0 5px;
+        flex-basis: 22%;
+      }
+      >div:last-child{
+          flex-basis: 250px;
+      }
+    }
+    .list-user-block {
+        > div {
+          padding: 0 5px;
+          flex-basis: 22%;
+        }
+        >div:last-child{
+            flex-basis: 250px;
+        }
+      }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .list-user-names {
+        > div {
+          padding: 0 5px;
+          flex-basis: 22%;
+        }
+        >div:last-child{
+            flex-basis: 250px;
+        }
+      }
+      .list-user-block {
+          > div {
+            padding: 0 5px;
+            flex-basis: 22%;
+          }
+          >div:last-child{
+              flex-basis: 250px;
+          }
+        }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
