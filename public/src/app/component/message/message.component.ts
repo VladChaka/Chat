@@ -1,15 +1,11 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'message',
     templateUrl: './message.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent{
     @Input() message: any;
     constructor() { }
-
-    ngOnInit() {
-    }
-
 }
