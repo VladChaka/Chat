@@ -1,6 +1,7 @@
 <div class="chat-container">
         <div class="chat-menu">
             <h1>Chat</h1>
+            <button class="auth-btn" (click)="logout">Logout</button>
         </div>
         <div class="chat-display">
             <message [message]="message" *ngFor="let message of messages"></message>

@@ -9,8 +9,7 @@ import { AuthenticationGuard } from "../service/authentication-guard.service";
 const mainRoutes: Routes = [
     {
         path: 'chat',
-        component: ChatComponent,
-        // canActivate: [AuthenticationGuard]
+        component: ChatComponent
     },
     {
         path: 'login',
@@ -22,8 +21,7 @@ const routes: Routes = [
     {
         path: 'main',
         component: MainPageComponent,
-        children: mainRoutes,
-        canActivate: [AuthenticationGuard]
+        children: mainRoutes
     },
     {
         path: '',

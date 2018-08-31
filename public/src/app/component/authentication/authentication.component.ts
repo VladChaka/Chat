@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 import { AuthenticationService } from '../../service/authentication.service';
 
@@ -6,13 +6,9 @@ import { AuthenticationService } from '../../service/authentication.service';
   selector: 'authentication',
   templateUrl: './authentication.component.html'
 })
-export class AuthenticationComponent implements OnInit {
+export class AuthenticationComponent{
 
     constructor(private authenticationService: AuthenticationService) { }
-
-    ngOnInit() {
-        console.log(this.authenticationService.isLogged() === false);
-    }
 
     googleSignIn(): void {
         this.authenticationService.authentication();
