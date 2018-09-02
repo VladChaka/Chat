@@ -1,6 +1,8 @@
 @import "less/fontawesome";
 @import "less/solid";
 @import "less/brands";
+@import "mixins";
+@import "less/regular";
 
 @color1: #33373A;
 @color2: #F8F9FA;
@@ -84,11 +86,11 @@ flex-basis: 10%;
   background: @color2;
   border-top: 2px solid @color3;
   border-bottom: 2px solid @color3;
-  overflow-y:scroll;
-  padding: 0 10px;
+  overflow-y:auto;
+  overflow-x: hidden;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
 }
 .message-block{
@@ -102,6 +104,7 @@ flex-basis: 10%;
   font-size: 1.1rem;
 }
 .message-text{
+  word-wrap: break-word;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 1rem;
@@ -115,19 +118,22 @@ flex-basis: 10%;
   color:grey;
   font-size: 0.8rem;
 }
-.auth-btn{
-  margin-left: 20px;
-  cursor: pointer;
-  background: @color3;
-  color:@color2;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.auth-btn:hover{
-  background: @color2;
-  color:@color3;
-  border-color: @color3;
+.chat-menu-btns{
+
+   button{
+    margin-left: 20px;
+    cursor: pointer;
+    background: @color3;
+    color:@color2;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  button:hover{
+    background: @color2;
+    color:@color3;
+    border-color: @color3;
+  }
 }

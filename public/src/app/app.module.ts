@@ -6,13 +6,17 @@ import { MessageComponent } from './component/message/message.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { ChatComponent } from './component/chat/chat.component';
+import { ChatHistoryComponent } from './component/chat-history/chat-history.component';
+import { ChatNowComponent } from './component/chat-now/chat-now.component';
 
 @NgModule({
   declarations: [
     MainPageComponent,
     MessageComponent,
     AuthenticationComponent,
-    ChatComponent
+    ChatComponent,
+    ChatHistoryComponent,
+    ChatNowComponent
   ],
   imports: [
     BrowserModule,

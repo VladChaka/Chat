@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SocketService } from '../../service/socket.service';
 
 @Component({
-  selector: 'app-chat',
+  selector: 'chat',
   templateUrl: './chat.component.html'
 })
 export class ChatComponent implements OnInit {
