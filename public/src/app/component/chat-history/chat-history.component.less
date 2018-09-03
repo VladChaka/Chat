@@ -1,0 +1,53 @@
+@color1: #33373A;
+@color2: #F8F9FA;
+@color3: #850c24;
+
+:host{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+h3{
+  padding: 0 10px;
+  position: absolute;
+  top: -25px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 2px;
+  color:@color2;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+}
+.chat-display{
+  flex-basis: 100%;
+  background: @color2;
+  border-top: 2px solid @color3;
+  border-bottom: 2px solid @color3;
+  overflow-y:auto;
+  overflow-x: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.history-select-block{
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  font-weight: bold;
+  select{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: @color2;
+    color:@color3;
+    border: @color3 2px solid;
+    border-radius: 2px;
+  }
+  option{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}

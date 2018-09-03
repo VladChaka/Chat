@@ -1,0 +1,29 @@
+@color1: #33373A;
+@color2: #F8F9FA;
+@color3: #850c24;
+
+.message-block{
+  flex-direction: column;
+  display: flex;
+  max-width: 45vw;
+}
+.message-author{
+  line-height: 0.9;
+  color:@color3;
+  font-size: 1.1rem;
+}
+.message-text{
+  word-wrap: break-word;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color:@color1;
+  background: @color2;
+  border: @color1 2px solid;
+}
+.message-date{
+  text-align: right;
+  padding-top: 2px;
+  color:grey;
+  font-size: 0.8rem;
+}

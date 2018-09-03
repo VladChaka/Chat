@@ -1,18 +1,11 @@
 <div class="chat-container">
     <div class="chat-menu">
-        <h1>Chat <i class="far fa-comments"></i></h1>
+        <h1 routerLink="now">Chat <i class="far fa-comments"></i></h1>
         <div class="chat-menu-btns">
-            <button>History <i class="fas fa-history"></i></button>
+            <button routerLink="now">Chat</button>
+            <button routerLink="history">History <i class="fas fa-history"></i></button>
             <button (click)="logout">Logout <i class="fas fa-sign-out-alt"></i></button>
         </div>
     </div>
-    <div class="chat-display">
-        <message [message]="message" *ngFor="let message of messages"></message>
-    </div>
-    <form class="chat-form">
-        <!--<textarea #name placeholder="Your name"></textarea>-->
-        <!--<button (click)="changeUsername(name.value)">Send</button>-->
-        <textarea [(ngModel)]="myMessage" name="myMessage" placeholder="Your message"></textarea>
-        <button (click)="sendMessage()">Send</button>
-    </form>
+        <router-outlet></router-outlet>
 </div>

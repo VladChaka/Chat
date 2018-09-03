@@ -9,6 +9,8 @@ import { ChatComponent } from './component/chat/chat.component';
 import { ChatHistoryComponent } from './component/chat-history/chat-history.component';
 import { ChatNowComponent } from './component/chat-now/chat-now.component';
 
+import {MonthFilterPipe} from "./pipe/month-filter.pipe";
+
 @NgModule({
   declarations: [
     MainPageComponent,
@@ -16,7 +18,8 @@ import { ChatNowComponent } from './component/chat-now/chat-now.component';
     AuthenticationComponent,
     ChatComponent,
     ChatHistoryComponent,
-    ChatNowComponent
+    ChatNowComponent,
+      MonthFilterPipe
   ],
   imports: [
     BrowserModule,

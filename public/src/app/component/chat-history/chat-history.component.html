@@ -1,3 +1,24 @@
-<p>
-  chat-history works!
-</p>
+<div class="chat-display">
+    <h3>History</h3>
+    <div class="history-select-block">
+       <span>Show history of last
+        <select [(ngModel)]="historyMonth" name="historyMonth" type="number" value="1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+    </select> month</span><br>
+    </div>
+    <message [message]="message" *ngFor="let message of messages | monthfilter: historyMonth"></message>
+</div>

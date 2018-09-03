@@ -1,3 +1,9 @@
-<p>
-  chat-now works!
-</p>
+<div class="chat-display">
+  <message [message]="message" *ngFor="let message of messages"></message>
+</div>
+<form class="chat-form">
+  <!--<textarea #name placeholder="Your name"></textarea>-->
+  <!--<button (click)="changeUsername(name.value)">Send</button>-->
+  <textarea [(ngModel)]="myMessage" name="myMessage" placeholder="Your message"></textarea>
+  <button (click)="sendMessage()">Send</button>
+</form>
