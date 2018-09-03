@@ -46,7 +46,6 @@ export class ChatNowComponent implements OnInit {
 
         this.socketService.send(this.socket, { content: message });
         this.myMessage = "";
-        console.log(this.messages);
     }
 
 

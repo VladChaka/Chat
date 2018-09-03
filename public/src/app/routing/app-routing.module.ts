@@ -19,7 +19,12 @@ const chatRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/now',
+        redirectTo: 'now',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: '/404',
         pathMatch: 'full'
     },
 ]
@@ -34,7 +39,12 @@ const mainRoutes: Routes = [
     {
         path: 'login',
         component: AuthenticationComponent
-    }
+    },
+    {
+        path: '**',
+        redirectTo: '/404',
+        pathMatch: 'full'
+    },
 ];
 
 const routes: Routes = [
@@ -46,6 +56,11 @@ const routes: Routes = [
     {
         path: '',
         redirectTo: '/main/chat',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: '/',
         pathMatch: 'full'
     },
 ];

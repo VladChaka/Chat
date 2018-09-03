@@ -10,6 +10,7 @@ import { ChatHistoryComponent } from './component/chat-history/chat-history.comp
 import { ChatNowComponent } from './component/chat-now/chat-now.component';
 
 import {MonthFilterPipe} from "./pipe/month-filter.pipe";
+import { Error404Component } from './component/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MonthFilterPipe} from "./pipe/month-filter.pipe";
     ChatComponent,
     ChatHistoryComponent,
     ChatNowComponent,
-      MonthFilterPipe
+      MonthFilterPipe,
+      Error404Component
   ],
   imports: [
     BrowserModule,

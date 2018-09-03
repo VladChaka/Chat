@@ -6,7 +6,95 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./chat-history.component.less']
 })
 export class ChatHistoryComponent implements OnInit {
-    messages: any = [
+    countOfMessages: string = '5';
+    messages: any[] = [
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
+        {
+            author: "Anon",
+            content: {
+                text: "Meabgfbdf",
+                time: "21:54:54"
+            }
+        },
         {
             author: "Anon",
             content: {

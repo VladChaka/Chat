@@ -30,11 +30,9 @@ export class AuthenticationService {
             .signInWithPopup(base_provider)
             .then(result => {
                 this.logged = true;
-                this.router.navigateByUrl('/main/chat');
-                console.log(result)
+                this.router.navigateByUrl('/main/chat/now');
             })
             .catch(err => {
-                console.log(err)
             });
     }
 

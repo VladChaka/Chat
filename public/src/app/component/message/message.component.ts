@@ -8,5 +8,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 })
 export class MessageComponent{
     @Input() message: any;
+    @Input() i: any;
     constructor() { }
 }
